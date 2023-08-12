@@ -1,9 +1,8 @@
 #include <stdio.h>
-
 /**
- * main - Prints all the numbers of base 16 in lowercase.
+ * main -Entry point
  *
- * Return: Always 0.
+ * Return: Always 0 (success)
  */
 int main(void)
 {
@@ -11,9 +10,9 @@ int main(void)
 
 	for (x = '0'; x <= '9'; x++)
 		putchar(x);
-	for (x = '0'; x <= 'f'; x++)
+	for (x = 'a'; x <= 'f'; x++)
 		putchar(x);
-		putchar('\n');
+	putchar('\n');
 
 	return (0);
 }
