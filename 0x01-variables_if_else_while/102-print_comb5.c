@@ -1,26 +1,24 @@
 #include <stdio.h>
 /**
  * main - Entry point
- *
  * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	int i, j;
+	int n1, n2;
 
-	for (i = 0; i <= 99; i++)
+	for (n1 = 0; n1 <= 99; n1++)
 	{
-		for (j = 0; j <= 99; j++)
+		for (n2 = 0; n2 <= 99; n2++)
 		{
-			if (i < j && i != j)
+			if (n1 < n2 && n1 != n2)
 			{
-				putchar((i / 10) + '0');
-				putchar((i % 10) + '0');
+				putchar((n1 / 10) + '0');
+				putchar((n1 % 10) + '0');
 				putchar(' ');
-				putchar((j / 10) + '0');
-				putchar((i % 10) + '0');
-				if (i != 98 || j != 99)
+				putchar((n2 / 10) + '0');
+				putchar((n2 % 10) + '0');
+				if (n1 != 98 || n2 != 99)
 				{
 					putchar(',');
 					putchar(' ');
@@ -31,4 +29,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
