@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * numLength - returns the length of string
- * Gnum: operand number
+ * numlength - returns the length of string
+ * @num: operand number
  *
  * Return: number of digits
  */
