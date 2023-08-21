@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _atoi - Converts a string to an integer
+ * _atoi - converts a string to an integer
  *
  * @s: string input parameter
  *
@@ -41,3 +41,5 @@ int _atoi(char *s)
 	if (f == 0)
 		return (0);
 }
+
+
