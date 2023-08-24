@@ -1,58 +1,84 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_line - prints a s bytes of a buffer
- * @c: buffer to print
- * @s: bytes of buffer to print
- * @l: line of buffer to print
- *
- * Return:void
+ * isPrintableAscii - check the code for Holberton School students.
+ * @n: input
+ * Return: pointer.
  */
-void print_line(char *c, int s, int l)
-{
-	int j, k;
 
-	for (j = 0; j <= 9; j++)
+int isPrintableAscii(int n)
+{
+	return (n >= 32 && n <= 126);
+}
+
+
+/**
+ * printHexes - check the code for Holberton School students.
+ * @b: input
+ * @start: input
+ * @end: pointer.
+ */
+void printHexes(char *b, int start, int end)
+{
+	int i = 0;
+
+	while (i < 10)
 	{
-	if (j <= s)
-	printf("%02x", c[l * 10 + j]);
-	else
-	printf(" ");
-	if (j % 2)
-	putchar(' ');
-	}
-	for (k = 0; k <= s; k++)
-	{
-	if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
-	putchar(c[l * 10 + k]);
-	else
-	putchar('.');
+		if (i < end)
+			printf("%02x", *(b + start + i));
+		else
+			printf("  ");
+		if (i % 2)
+			printf(" ");
+		i++;
+
 	}
 }
+
 /**
- * print_buffer - prints a buffer
- * @b: buffer to print
- * @size: size of buffer
- *
- * Return:void
+ * printAscii - check the code for Holberton School students.
+ * @b: input
+ * @start: input
+ * @end: input
+ * Return: pointer.
  */
+
+void printAscii(char *b, int start, int end)
+{
+	int ch, i = 0;
+
+	while (i < end)
+	{
+		ch = *(b + i + start);
+		if (!isPrintableAscii(ch))
+			ch = 46;
+		printf("%c", ch);
+		i++;
+	}
+}
+
+/**
+ * print_buffer - check the code for Holberton School students.
+ * @b: input
+ * @size: input
+ * Return: pointer.
+ */
+
 void print_buffer(char *b, int size)
 {
-	int i;
+	int start, end;
 
-	for (i = 0; i <= (size - 1) / 10 && size; i++)
+	if (size > 0)
 	{
-	printf("%08x: ", i * 10);
-	if (i < size / 10)
-	{
-	print_line(b, 9, i);
+		for (start = 0; start < size; start += 10)
+		{
+			end = (size - start < 10) ? size - start : 10;
+			printf("%08x: ", start);
+			printHexes(b, start, end);
+			printAscii(b, start, end);
+			printf("\n");
+		}
 	}
 	else
-	{
-	print_line(b, size % 10 - 1, i);
-	}
-	putchar('\n');
-	}
-	if (size == 0)
-	putchar('\n');
+		printf("\n");
 }
