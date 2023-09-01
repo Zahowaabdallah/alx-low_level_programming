@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main_prints the minimum number of coins
+ * main-prints the minimum number of coins
  * to make change for an amount of money.
  * @argc:number of commandline arguments.
  * @argv:pointer to an array of command line arguments.
@@ -28,10 +28,11 @@ int main(int argc, char *argv[])
 		}
 	}
 	printf("%d\n", leastcents);
+	}
 	else
 	{
 		printf("Error\n");
-	return (1);
+		return (1);
 	}
 	return (0);
 }
