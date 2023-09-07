@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _puts - prints a string, followed by a new line.
  * @str: pointer to the string to print
@@ -53,20 +54,20 @@ int _atoi(const char *s)
 
 void print_int(unsigned long int n)
 {
-	unsigned long int divisor = 1, i, respo;
+	unsigned long int divisor = 1, i, resp;
 
 	for (i = 0; n / divisor > 9; i++, divisor *= 10)
 	;
 
 	for (; divisor >= 1; n %= divisor, divisor /= 10)
 	{
-		respo = n / divisor;
-		_putchar('0' + respo);
+		resp = n / divisor;
+		_putchar('0' + resp);
 	}
 }
 
 /**
- * main - print the result of the multiplication followed by a new line
+ * main - print the result of the multiplication, followed by a new line
  * @argc: int
  * @argv: list
  * Return: 0
