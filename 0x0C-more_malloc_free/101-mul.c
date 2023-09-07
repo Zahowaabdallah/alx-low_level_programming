@@ -31,7 +31,7 @@ int _strlen(char *s)
 {
 	int i = 0;
 
-	while (s[i] != '\0)
+	while (s[i] != '\0')
 	{
 		i++;
 	}
@@ -52,7 +52,7 @@ void errors(void)
  * @argc: number of arguments
  * @argv: array of arguments
  *
- * Return: always 0 (success)
+ * Return: always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
 		{
 			digit2 = s2[len2] - '0';
 			carry += result[len1 + len2 + 1] + (digit1 * digit2);
-			result[en1 + len2 + 1] = carry % 10;
+			result[len1 + len2 + 1] = carry % 10;
 			carry /= 10;
 		}
 		if (carry > 0)
