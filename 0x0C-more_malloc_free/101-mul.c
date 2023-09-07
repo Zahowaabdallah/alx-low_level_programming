@@ -8,7 +8,7 @@
  *
  * Return: 0 if a non-digit is found, 1 otherwise
  */
-int is_digit(char *s)
+int is_digit(char *s);
 {
 	int i = 0;
 
@@ -41,7 +41,7 @@ int _strlen(char *s)
 /**
  * errors - handles errors for main
  */
-void errors(void)
+void errors(void)	
 {
 	printf("Error\n");
 	exit(98);
