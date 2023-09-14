@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include "variadic_functions.h"
 #include <stdlib.h>
 
@@ -17,8 +16,8 @@ void print_all(const char * const format, ...)
 		{ "f", print_a_float },
 		{ "s", print_a_char_ptr }
 	};
-	unsigned i = 0;
-	unsigned j = 0;
+	unsigned int i = 0;
+	unsigned int j = 0;
 	char *separator = "";
 
 	va_start(args, format);
@@ -97,6 +96,3 @@ void print_a_char_ptr(char *separator, va_list args)
 
 	printf("%s%s", separator, arg);
 }
-=======
-
->>>>>>> d8a9b68c5212a854e502a860067fc55ea0eb795f
