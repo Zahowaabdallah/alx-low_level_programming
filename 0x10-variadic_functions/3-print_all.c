@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "variadic_functions.h"
 #include <stdlib.h>
 
@@ -96,3 +97,6 @@ void print_a_char_ptr(char *separator, va_list args)
 
 	printf("%s%s", separator, arg);
 }
+=======
+
+>>>>>>> d8a9b68c5212a854e502a860067fc55ea0eb795f
