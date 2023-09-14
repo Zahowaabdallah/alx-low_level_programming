@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
-  * print_all1 - Prints anything
+  * print_all - Prints anything
   * @format: The conversion specifier to prints
   *
   * Return: Nothing
