@@ -1,0 +1,17 @@
+#include "main.h"
+
+/**
+* handle_string - function
+* @list: input
+* @string_count: input	
+* Return: void
+*/
+
+
+int handle_string(va_list list, int string_counts)
+{
+	int c = va_arg(list, int);
+
+	write(1, &c, 1);
+	return (string_count++)
+}
