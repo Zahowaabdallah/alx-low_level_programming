@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * main - Entry point
+ * _putchar - Entry point
  * @c: char
  * Return: 0
  */
