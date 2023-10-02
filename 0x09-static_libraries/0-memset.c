@@ -2,14 +2,14 @@
 
 /**
  * _memset - function
- * @k: input
- * @a: input
- * @d: input
+ * @s: input
+ * @b: input
+ * @n: input
  * Return: pointer.
  */
-char *_memset(char *k, char a, unsigned int d)
+char *_memset(char *s, char b, unsigned int n)
 {
-	while (d--)
-		*(k + d) = a;
-	return (k);
+	while (n--)
+		*(s + n) = b;
+	return (s);
 }
