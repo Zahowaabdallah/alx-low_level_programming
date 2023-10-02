@@ -2,7 +2,7 @@
 
 /**
  * main - entry point
- * argc: input
+ * @argc: input
  * @argv: input
  * Return: int.
  */
