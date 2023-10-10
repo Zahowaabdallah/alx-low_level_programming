@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdli.h>
 #include "dog.h"
 
 /**
@@ -23,8 +23,8 @@ int _strlen(char *s)
 }
 
 /**
- * _strcpy - function
- * dest: input
+ * *_strcpy - function
+ * @dest: input
  * @src: input
  * Return: pointer.
  */
