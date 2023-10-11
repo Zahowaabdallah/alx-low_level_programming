@@ -1,4 +1,4 @@
-g#ifndef _CALC_H_
+#ifndef _CALC_H_
 #define _CALC_H_
 
 #include <stdlib.h>
