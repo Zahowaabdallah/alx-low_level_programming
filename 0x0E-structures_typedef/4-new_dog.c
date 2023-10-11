@@ -23,7 +23,7 @@ int _strlen(char *s)
 }
 
 /**
- * *_strcpy - function
+ * *_strcpy - function name
  * @dest: input
  * @src: input
  * Return: pointer.
@@ -76,12 +76,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	dog->owner = malloc(sizeof(char) * (len2 + 1));
-	if (dog->owner == NULL)
-	{
-		free(dog);
-		free(dog->name);
-		return (NULL);
-	}
+		if (dog->owner == NULL)
+		{
+			free(dog);
+			free(dog->name);
+			return (NULL);
+		}
 	_strcpy(dog->name, name);
 	_strcpy(dog->owner, owner);
 	dog->age = age;
