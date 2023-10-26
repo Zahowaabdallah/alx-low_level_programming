@@ -3,44 +3,27 @@
 /**
  * binary_to_uint - converts
  * a binary number to unsigned int
- * @b: input
- * Return: unsigned int or 0 if fails.
+ * @b: char string
+ * Return: convertd decimal number or 0
  */
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int len;
-	unsigned int result;
+	unsigned int i, x = 0;
 
-	i = 0;
-	j = 1;
-	len = 0;
-	result = 0;
-
-	if (!b)
+	if (b == NULL)
+	{
 		return (0);
-
-	while (b[i] != '\0')
+	}
+	for (i = 0; b[i] != '\0'; i++)
 	{
-		if (b[i] != '1' && b[i] != '0')
+		if (b[i] != '0' && b[i] != '1')
+		{
 			return (0);
-		i++;
+		}
+		x <<= 1;
+		if (b[i] == '1')
+			x += 1;
 	}
-
-	len = i - 1;
-
-	i = 0;
-
-	while (b[i] != '\0')
-	{
-		if (b[len] == '1')
-			result += j;
-		i++;
-		j *= 2;
-		len--;
-	}
-
-	return (result);
+	return (x);
 }
